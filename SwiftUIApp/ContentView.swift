@@ -37,7 +37,7 @@ struct ContentView: View {
 						Image(systemName: "shift")
 					}
 				}
-				.tag(1)
+				.tag(2)
 		}
     }
 }

@@ -9,29 +9,21 @@
 import SwiftUI
 
 struct SecondTab: View {
+	@ObservedObject var storage = ListStorage()
+	
     var body: some View {
 		NavigationView {
 			VStack {
 				List {
-					NavigationLink(destination: DetailView()) {
-						Text("Первая строка")
-					}
-					NavigationLink(destination: DetailView()) {
-						Text("Вторая строка")
-					}
-					NavigationLink(destination: DetailView()) {
-						Text("Третья строка")
+					ForEach(storage.items) { item in
+						NavigationLink(destination: DetailView()) {
+							Text(item.name)
+						}
 					}
 				}
 			}
 			.navigationBarHidden(false)
             .navigationBarTitle("List")
 		}
-    }
-}
-
-struct SecondTab_Previews: PreviewProvider {
-    static var previews: some View {
-        SecondTab()
     }
 }

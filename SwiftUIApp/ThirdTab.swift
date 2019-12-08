@@ -31,7 +31,7 @@ struct ThirdTab_Previews: PreviewProvider {
 struct ModalView: View {
  
     var body: some View {
-        Text("Модальное окно моментально скрывается. Не понимаю почему")
+        Text("Всё ок")
     }
     
 }
