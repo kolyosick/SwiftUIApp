@@ -10,14 +10,15 @@ import SwiftUI
 
 struct SecondTab: View {
 	@ObservedObject var storage = ListStorage()
+	@Binding var selectedItem: Int?
 	
     var body: some View {
 		NavigationView {
 			VStack {
 				List {
-					ForEach(storage.items) { item in
-						NavigationLink(destination: DetailView()) {
-							Text(item.name)
+					ForEach(storage.items.indices) { index in
+						NavigationLink(destination: DetailView(), tag: index, selection: self.$selectedItem) {
+							Text(self.storage.items[index].name)
 						}
 					}
 				}

@@ -11,10 +11,16 @@ import SwiftUI
 struct ContentView: View {
 	
 	@State private var selection = 0
+	@State var selectedItem: Int?
 	
     var body: some View {
 		TabView(selection: $selection) {
-			FirstTab()
+			Button(action: {
+					self.selection = 1
+					self.selectedItem = 1
+				}) {
+					Text("Open second tab")
+				}
 				.tabItem {
 					VStack {
 						Text("Button")
@@ -22,7 +28,7 @@ struct ContentView: View {
 					}
 				}
 				.tag(0)
-			SecondTab()
+			SecondTab(selectedItem: $selectedItem)
 				.tabItem {
 					VStack {
 						Text("List")

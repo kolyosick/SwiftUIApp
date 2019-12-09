@@ -15,7 +15,7 @@ struct ThirdTab: View {
         Button(action: {
             self.showModal = true
         }) {
-            Text("Показать модальное окно")
+            Text("Show modal")
 		}.betterSheet(isPresented: self.$showModal,  onDismiss: { print("Modal dismissed") }) {
             ModalView()
         }
@@ -31,7 +31,7 @@ struct ThirdTab_Previews: PreviewProvider {
 struct ModalView: View {
  
     var body: some View {
-        Text("Всё ок")
+        Text("It is okay")
     }
     
 }

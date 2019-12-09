@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C1B4FE223995CE90044DBEF /* FirstTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE123995CE90044DBEF /* FirstTab.swift */; };
 		8C1B4FE423995F010044DBEF /* SecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE323995F010044DBEF /* SecondTab.swift */; };
 		8C1B4FE623995F2A0044DBEF /* ThirdTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */; };
 		8C1B4FE8239960AA0044DBEF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE7239960AA0044DBEF /* DetailView.swift */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C1B4FE123995CE90044DBEF /* FirstTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTab.swift; sourceTree = "<group>"; };
 		8C1B4FE323995F010044DBEF /* SecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTab.swift; sourceTree = "<group>"; };
 		8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTab.swift; sourceTree = "<group>"; };
 		8C1B4FE7239960AA0044DBEF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				8CBD3D3623903B6300A4C676 /* AppDelegate.swift */,
 				8CBD3D3823903B6300A4C676 /* SceneDelegate.swift */,
 				8CBD3D3A23903B6300A4C676 /* ContentView.swift */,
-				8C1B4FE123995CE90044DBEF /* FirstTab.swift */,
 				8C1B4FE323995F010044DBEF /* SecondTab.swift */,
 				8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */,
 				8CBD3D3C23903B6400A4C676 /* Assets.xcassets */,
@@ -172,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C1B4FE223995CE90044DBEF /* FirstTab.swift in Sources */,
 				8C1B4FE623995F2A0044DBEF /* ThirdTab.swift in Sources */,
 				8C1B4FE423995F010044DBEF /* SecondTab.swift in Sources */,
 				8C1B4FEC239D3A8B0044DBEF /* ListItem.swift in Sources */,
