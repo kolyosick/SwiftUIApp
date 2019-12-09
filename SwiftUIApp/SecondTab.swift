@@ -17,7 +17,7 @@ struct SecondTab: View {
 			VStack {
 				List {
 					ForEach(storage.items.indices) { index in
-						NavigationLink(destination: DetailView(), tag: index, selection: self.$selectedItem) {
+						NavigationLink(destination: DetailView(text: self.storage.items[index].name), tag: index, selection: self.$selectedItem) {
 							Text(self.storage.items[index].name)
 						}
 					}

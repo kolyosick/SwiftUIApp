@@ -9,13 +9,9 @@
 import SwiftUI
 
 struct DetailView: View {
+	var text: String
+	
     var body: some View {
-        Text("Пытался передать сюда текст через @Binding String переменную, не получается её подставить")
-    }
-}
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
+		Text(verbatim: text)
     }
 }
