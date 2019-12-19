@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C1B4FE423995F010044DBEF /* SecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE323995F010044DBEF /* SecondTab.swift */; };
+		8C1B4FE423995F010044DBEF /* ListTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE323995F010044DBEF /* ListTab.swift */; };
 		8C1B4FE623995F2A0044DBEF /* ThirdTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */; };
 		8C1B4FE8239960AA0044DBEF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE7239960AA0044DBEF /* DetailView.swift */; };
 		8C1B4FEA239D39B40044DBEF /* ListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B4FE9239D39B40044DBEF /* ListStorage.swift */; };
@@ -19,10 +19,16 @@
 		8CBD3D4023903B6400A4C676 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD3D3F23903B6400A4C676 /* Preview Assets.xcassets */; };
 		8CBD3D4323903B6400A4C676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD3D4123903B6400A4C676 /* LaunchScreen.storyboard */; };
 		8CBD3D4C2395018100A4C676 /* BetterSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8CBD3D4B2395018100A4C676 /* BetterSheet */; };
+		8CD92E5A23AB7C6D00162C88 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD92E5923AB7C6D00162C88 /* Alamofire */; };
+		8CD92E5D23AB7C9100162C88 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E5C23AB7C9100162C88 /* Collection.swift */; };
+		8CD92E6023AB7CC600162C88 /* RickMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E5F23AB7CC600162C88 /* RickMortyService.swift */; };
+		8CD92E6323AB7D1E00162C88 /* Marshal in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD92E6223AB7D1E00162C88 /* Marshal */; };
+		8CD92E6523AB7F7B00162C88 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E6423AB7F7B00162C88 /* Character.swift */; };
+		8CD92E6823AB9EF800162C88 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E6723AB9EF800162C88 /* SegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C1B4FE323995F010044DBEF /* SecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTab.swift; sourceTree = "<group>"; };
+		8C1B4FE323995F010044DBEF /* ListTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTab.swift; sourceTree = "<group>"; };
 		8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTab.swift; sourceTree = "<group>"; };
 		8C1B4FE7239960AA0044DBEF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		8C1B4FE9239D39B40044DBEF /* ListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStorage.swift; sourceTree = "<group>"; };
@@ -35,6 +41,10 @@
 		8CBD3D3F23903B6400A4C676 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CBD3D4223903B6400A4C676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CBD3D4423903B6400A4C676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CD92E5C23AB7C9100162C88 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		8CD92E5F23AB7CC600162C88 /* RickMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyService.swift; sourceTree = "<group>"; };
+		8CD92E6423AB7F7B00162C88 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		8CD92E6723AB9EF800162C88 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD92E6323AB7D1E00162C88 /* Marshal in Frameworks */,
 				8CBD3D4C2395018100A4C676 /* BetterSheet in Frameworks */,
+				8CD92E5A23AB7C6D00162C88 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,18 +80,21 @@
 		8CBD3D3523903B6300A4C676 /* SwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
+				8CD92E6623AB9EEE00162C88 /* UIKit */,
+				8CD92E5E23AB7CAC00162C88 /* API */,
+				8CD92E5B23AB7C9100162C88 /* Extensions */,
 				8CBD3D3623903B6300A4C676 /* AppDelegate.swift */,
 				8CBD3D3823903B6300A4C676 /* SceneDelegate.swift */,
 				8CBD3D3A23903B6300A4C676 /* ContentView.swift */,
-				8C1B4FE323995F010044DBEF /* SecondTab.swift */,
+				8C1B4FE323995F010044DBEF /* ListTab.swift */,
 				8C1B4FE523995F2A0044DBEF /* ThirdTab.swift */,
+				8C1B4FE7239960AA0044DBEF /* DetailView.swift */,
+				8C1B4FE9239D39B40044DBEF /* ListStorage.swift */,
+				8C1B4FEB239D3A8B0044DBEF /* ListItem.swift */,
 				8CBD3D3C23903B6400A4C676 /* Assets.xcassets */,
 				8CBD3D4123903B6400A4C676 /* LaunchScreen.storyboard */,
 				8CBD3D4423903B6400A4C676 /* Info.plist */,
 				8CBD3D3E23903B6400A4C676 /* Preview Content */,
-				8C1B4FE7239960AA0044DBEF /* DetailView.swift */,
-				8C1B4FE9239D39B40044DBEF /* ListStorage.swift */,
-				8C1B4FEB239D3A8B0044DBEF /* ListItem.swift */,
 			);
 			path = SwiftUIApp;
 			sourceTree = "<group>";
@@ -90,6 +105,31 @@
 				8CBD3D3F23903B6400A4C676 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CD92E5B23AB7C9100162C88 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CD92E5C23AB7C9100162C88 /* Collection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8CD92E5E23AB7CAC00162C88 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8CD92E5F23AB7CC600162C88 /* RickMortyService.swift */,
+				8CD92E6423AB7F7B00162C88 /* Character.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8CD92E6623AB9EEE00162C88 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8CD92E6723AB9EF800162C88 /* SegmentedControl.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +150,8 @@
 			name = SwiftUIApp;
 			packageProductDependencies = (
 				8CBD3D4B2395018100A4C676 /* BetterSheet */,
+				8CD92E5923AB7C6D00162C88 /* Alamofire */,
+				8CD92E6223AB7D1E00162C88 /* Marshal */,
 			);
 			productName = SwiftUIApp;
 			productReference = 8CBD3D3323903B6300A4C676 /* SwiftUIApp.app */;
@@ -141,6 +183,8 @@
 			mainGroup = 8CBD3D2A23903B6300A4C676;
 			packageReferences = (
 				8CBD3D4A2395018100A4C676 /* XCRemoteSwiftPackageReference "BetterSheet" */,
+				8CD92E5823AB7C6D00162C88 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8CD92E6123AB7D1E00162C88 /* XCRemoteSwiftPackageReference "Marshal" */,
 			);
 			productRefGroup = 8CBD3D3423903B6300A4C676 /* Products */;
 			projectDirPath = "";
@@ -169,13 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD92E5D23AB7C9100162C88 /* Collection.swift in Sources */,
 				8C1B4FE623995F2A0044DBEF /* ThirdTab.swift in Sources */,
-				8C1B4FE423995F010044DBEF /* SecondTab.swift in Sources */,
+				8CD92E6523AB7F7B00162C88 /* Character.swift in Sources */,
+				8C1B4FE423995F010044DBEF /* ListTab.swift in Sources */,
 				8C1B4FEC239D3A8B0044DBEF /* ListItem.swift in Sources */,
 				8C1B4FE8239960AA0044DBEF /* DetailView.swift in Sources */,
 				8CBD3D3723903B6300A4C676 /* AppDelegate.swift in Sources */,
 				8C1B4FEA239D39B40044DBEF /* ListStorage.swift in Sources */,
 				8CBD3D3923903B6300A4C676 /* SceneDelegate.swift in Sources */,
+				8CD92E6023AB7CC600162C88 /* RickMortyService.swift in Sources */,
+				8CD92E6823AB9EF800162C88 /* SegmentedControl.swift in Sources */,
 				8CBD3D3B23903B6300A4C676 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +428,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8CD92E5823AB7C6D00162C88 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.1;
+			};
+		};
+		8CD92E6123AB7D1E00162C88 /* XCRemoteSwiftPackageReference "Marshal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/utahiosmac/Marshal";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -387,6 +451,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8CBD3D4A2395018100A4C676 /* XCRemoteSwiftPackageReference "BetterSheet" */;
 			productName = BetterSheet;
+		};
+		8CD92E5923AB7C6D00162C88 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CD92E5823AB7C6D00162C88 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8CD92E6223AB7D1E00162C88 /* Marshal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CD92E6123AB7D1E00162C88 /* XCRemoteSwiftPackageReference "Marshal" */;
+			productName = Marshal;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

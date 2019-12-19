@@ -15,27 +15,15 @@ struct ContentView: View {
 	
     var body: some View {
 		TabView(selection: $selection) {
-			Button(action: {
-					self.selection = 1
-					self.selectedItem = 1
-				}) {
-					Text("Open second tab")
-				}
+			ListTab(selectedItem: $selectedItem)
+				.environmentObject(ListStorage())
 				.tabItem {
 					VStack {
-						Text("Button")
-                        Image(systemName: "arrowshape.turn.up.right")
-					}
-				}
-				.tag(0)
-			SecondTab(selectedItem: $selectedItem)
-				.tabItem {
-					VStack {
-						Text("List")
+						Text("Rick and Morty")
                         Image(systemName: "tray.full")
 					}
 				}
-				.tag(1)
+				.tag(0)
 			ThirdTab()
 				.tabItem {
 					VStack {
@@ -43,7 +31,7 @@ struct ContentView: View {
 						Image(systemName: "shift")
 					}
 				}
-				.tag(2)
+				.tag(1)
 		}
     }
 }

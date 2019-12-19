@@ -9,7 +9,25 @@
 import Foundation
 
 class ListStorage: ObservableObject {
-	@Published private(set) var items = [ListItem(id: "0", name: "First item"),
-										 ListItem(id: "1", name: "Second item"),
-										 ListItem(id: "2", name: "Third item")]
+	let service = RickMortyService()
+	@Published private(set) var items: [Character] = []
+	@Published var pageIndex: Int = 0
+    @Published var isNewPageLoading = false
+	
+	init() {
+		fetchData()
+	}
+	
+	func fetchData() {
+		guard isNewPageLoading == false else {
+            return
+        }
+        isNewPageLoading = true
+        self.pageIndex += 1
+		
+		service.loadCharachters(page: pageIndex) { charachters, error in
+			self.items.append(contentsOf: charachters ?? [])
+            self.isNewPageLoading = false
+		}
+	}
 }
