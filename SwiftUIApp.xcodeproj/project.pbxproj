@@ -25,6 +25,7 @@
 		8CD92E6323AB7D1E00162C88 /* Marshal in Frameworks */ = {isa = PBXBuildFile; productRef = 8CD92E6223AB7D1E00162C88 /* Marshal */; };
 		8CD92E6523AB7F7B00162C88 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E6423AB7F7B00162C88 /* Character.swift */; };
 		8CD92E6823AB9EF800162C88 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E6723AB9EF800162C88 /* SegmentedControl.swift */; };
+		8CD92E6C23AE7A9700162C88 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD92E6B23AE7A9700162C88 /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		8CD92E5F23AB7CC600162C88 /* RickMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyService.swift; sourceTree = "<group>"; };
 		8CD92E6423AB7F7B00162C88 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8CD92E6723AB9EF800162C88 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		8CD92E6B23AE7A9700162C88 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				8CD92E5F23AB7CC600162C88 /* RickMortyService.swift */,
 				8CD92E6423AB7F7B00162C88 /* Character.swift */,
+				8CD92E6B23AE7A9700162C88 /* Episode.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				8C1B4FEC239D3A8B0044DBEF /* ListItem.swift in Sources */,
 				8C1B4FE8239960AA0044DBEF /* DetailView.swift in Sources */,
 				8CBD3D3723903B6300A4C676 /* AppDelegate.swift in Sources */,
+				8CD92E6C23AE7A9700162C88 /* Episode.swift in Sources */,
 				8C1B4FEA239D39B40044DBEF /* ListStorage.swift in Sources */,
 				8CBD3D3923903B6300A4C676 /* SceneDelegate.swift in Sources */,
 				8CD92E6023AB7CC600162C88 /* RickMortyService.swift in Sources */,

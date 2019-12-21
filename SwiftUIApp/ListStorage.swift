@@ -10,24 +10,41 @@ import Foundation
 
 class ListStorage: ObservableObject {
 	let service = RickMortyService()
-	@Published private(set) var items: [Character] = []
-	@Published var pageIndex: Int = 0
-    @Published var isNewPageLoading = false
+	@Published private(set) var characters: [Character] = []
+	@Published private(set) var episodes: [Episode] = []
+	@Published var charactersPageIndex: Int = 0
+	@Published var episodesPageIndex: Int = 0
+    @Published var isNewEpisodesPageLoading = false
+	@Published var isNewCharactersPageLoading = false
 	
 	init() {
-		fetchData()
+		fetchCharactersData()
+		fetchEpisodesData()
 	}
 	
-	func fetchData() {
-		guard isNewPageLoading == false else {
+	func fetchCharactersData() {
+		guard isNewCharactersPageLoading == false else {
             return
         }
-        isNewPageLoading = true
-        self.pageIndex += 1
+        isNewCharactersPageLoading = true
+        self.charactersPageIndex += 1
 		
-		service.loadCharachters(page: pageIndex) { charachters, error in
-			self.items.append(contentsOf: charachters ?? [])
-            self.isNewPageLoading = false
+		service.loadCharachters(page: charactersPageIndex) { charachters, error in
+			self.characters.append(contentsOf: charachters ?? [])
+            self.isNewCharactersPageLoading = false
+		}
+	}
+	
+	func fetchEpisodesData() {
+		guard isNewEpisodesPageLoading == false else {
+            return
+        }
+        isNewEpisodesPageLoading = true
+        self.episodesPageIndex += 1
+		
+		service.loadEpisodes(page: episodesPageIndex) { episodes, error in
+			self.episodes.append(contentsOf: episodes ?? [])
+            self.isNewEpisodesPageLoading = false
 		}
 	}
 }

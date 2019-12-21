@@ -17,16 +17,31 @@ struct ListTab: View {
 		NavigationView {
 			VStack {
 				SegmentedControl(titles: ["Charachters", "Episodes"], selectedIndex: $selectedSegment)
-				List(storage.items) { charachter in
-					VStack(alignment: .leading) {
-						Text(charachter.name)
-						// Loading
-						if self.storage.isNewPageLoading && self.storage.items.isLastItem(charachter) {
-							Divider()
-							Text("Loading...")
+				if selectedSegment == 0 {
+					List(storage.characters) { charachter in
+						VStack(alignment: .leading) {
+							Text(charachter.name)
+							// Loading
+							if self.storage.isNewCharactersPageLoading && self.storage.characters.isLastItem(charachter) {
+								Divider()
+								Text("Loading...")
+							}
+						}.onAppear {
+							self.onItemShowed(charachter)
 						}
-					}.onAppear {
-						self.onItemShowed(charachter)
+					}
+				} else {
+					List(storage.episodes) { episode in
+						VStack(alignment: .leading) {
+							Text(episode.name)
+							// Loading
+							if self.storage.isNewEpisodesPageLoading && self.storage.episodes.isLastItem(episode) {
+								Divider()
+								Text("Loading...")
+							}
+						}.onAppear {
+							self.onItemShowed(episode)
+						}
 					}
 				}
 			}
@@ -37,8 +52,10 @@ struct ListTab: View {
 
 extension ListTab {
     private func onItemShowed<T:Identifiable>(_ item: T) {
-        if self.storage.items.isLastItem(item) {
-            self.storage.fetchData()
+        if selectedSegment == 0, self.storage.characters.isLastItem(item) {
+            self.storage.fetchCharactersData()
+        } else if selectedSegment == 1, self.storage.episodes.isLastItem(item) {
+            self.storage.fetchEpisodesData()
         }
     }
 }

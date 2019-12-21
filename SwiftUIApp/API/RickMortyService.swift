@@ -37,4 +37,29 @@ class RickMortyService {
 			}
 		}
 	}
+	
+	func loadEpisodes(page: Int, completion: @escaping ((_ data: [Episode]?,_ error: Error?) -> Void)) {
+		
+		Alamofire.request(RickMortyService.basePath + "/episode/",
+						  method: .get,
+						  parameters: ["page": page]).responseJSON { response in
+			switch response.result {
+			case .success:
+				if let JSON = response.result.value as? [String : AnyObject], let results = JSON["results"] as? [[String : AnyObject]] {
+					var episodes = [Episode]()
+					for dict in results {
+						if let episode = try? Episode.value(from: dict) {
+							episodes.append(episode)
+						}
+					}
+					completion(episodes, nil)
+				} else {
+					completion(nil, nil)
+				}
+			case .failure(let error):
+				print(error)
+				completion(nil, error)
+			}
+		}
+	}
 }
